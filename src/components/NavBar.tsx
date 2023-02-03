@@ -36,7 +36,7 @@ export default function NavBar({ user, space }: Props) {
               {user && <div>{user.name || user.email}</div>}
             </li>
             <li>
-              <a onClick={ onSignout}>Logout</a>
+              <a onClick={void onSignout}>Logout</a>
             </li>
           </ul>
         </div>

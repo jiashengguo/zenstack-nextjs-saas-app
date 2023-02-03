@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { useCurrentUser } from '../lib/context';
 import { useSpaceUser } from '../lib/hooks';
@@ -53,7 +54,7 @@ export default function ManageMembers({ space }: Props) {
                 } else if (err.info.code === 'P2025') {
                     alert('User is not found for this email');
                 } else {
-                    alert(`Unexpected Prisma error: ${err.info.code}`);
+                    alert(`Unexpected Prisma error: ${err.info.code as string}`);
                 }
             } else {
                 alert(`Error occurred: ${JSON.stringify(err)}`);
@@ -80,7 +81,7 @@ export default function ManageMembers({ space }: Props) {
                     }}
                     onKeyUp={(e: KeyboardEvent<HTMLInputElement>) => {
                         if (e.key === 'Enter') {
-                            inviteUser();
+                            void inviteUser();
                         }
                     }}
                 />
@@ -96,7 +97,7 @@ export default function ManageMembers({ space }: Props) {
                     <option value={SpaceUserRole.ADMIN}>ADMIN</option>
                 </select>
 
-                <button onClick={() => inviteUser()}>
+                <button onClick={() => void inviteUser()}>
                     <PlusIcon className="w-6 h-6 text-gray-500" />
                 </button>
             </div>
@@ -121,7 +122,7 @@ export default function ManageMembers({ space }: Props) {
                                 <TrashIcon
                                     className="w-4 h-4 text-gray-500"
                                     onClick={() => {
-                                        removeMember(member.id);
+                                        void removeMember(member.id);
                                     }}
                                 />
                             )}
