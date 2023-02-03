@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "npm run generate && next build",
     "dev": "next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "generate": "zenstack generate",
+    "db:push": "zenstack db push",
+    "db:browse": "zenstack studio",
+    "vercel-build": "npm run build && npm run db:deploy"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.14",
