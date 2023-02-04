@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FormEvent, useEffect, useState } from "react";
 
-export default function Signup() {
+export default function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
@@ -99,10 +99,9 @@ export default function Signup() {
             </div>
 
             <div className="mt-4 flex flex-col gap-4 lg:flex-row">
-              <button className="btn btn-primary w-full lg:w-fit" type="submit">
+              <button className="btn-primary btn w-full lg:w-fit" type="submit">
                 Login to your account
               </button>
-
             </div>
 
             <div className="mt-4 text-sm font-medium text-gray-500">

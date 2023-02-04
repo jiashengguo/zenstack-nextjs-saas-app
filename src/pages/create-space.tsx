@@ -57,7 +57,7 @@ const CreateSpace: NextPage = () => {
   return (
     <WithNavBar>
       <div className="flex h-full items-center justify-center">
-        <form onSubmit={void onSubmit}>
+        <form onSubmit={(e) => void onSubmit(e)}>
           <h1 className="mb-8 text-3xl">Create a space</h1>
           <div className="flex-col space-y-4">
             <div>
