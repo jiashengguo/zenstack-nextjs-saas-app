@@ -21,7 +21,7 @@
     "@prisma/client": "^4.9.0",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@zenstackhq/next": "^1.0.0-alpha.28",
-    "@zenstackhq/react": "^1.0.0-alpha.28",
+    "@zenstackhq/react": "^1.0.0-alpha.32",
     "@zenstackhq/runtime": "^1.0.0-alpha.28",
     "babel-plugin-superjson-next": "^0.4.5",
     "daisyui": "^2.50.0",

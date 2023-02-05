@@ -18,7 +18,7 @@ const Home: NextPage<Props> = ({ spaces }) => {
   const { status } = useSession();
 
   if (status === "unauthenticated") {
-    void router.push('/signin');
+    void router.push("/signin");
     return <></>;
   }
 
@@ -33,7 +33,9 @@ const Home: NextPage<Props> = ({ spaces }) => {
           <div className="w-full p-8">
             <h2 className="mb-8 text-left text-lg text-gray-700 md:text-xl">
               Choose a space to start, or{" "}
-              <Link  className="link-primary underline" href="/create-space" >create a new one.</Link>
+              <Link className="link-primary underline" href="/create-space">
+                create a new one.
+              </Link>
             </h2>
             <Spaces spaces={spaces} />
           </div>
